@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PreetsMessenger;assembly=PreetsMessenger"
+             x:Class="PreetsMessenger.LoginPage">
+    <AbsoluteLayout>
+        <Image Source="{local:EmbeddedImage PreetsMessenger.Resources.background2.jpg}" 
+                           Aspect="AspectFill" 
+                           AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                           AbsoluteLayout.LayoutFlags="All"/>
+
+        <StackLayout x:Name="loginStack"
+                     Padding="20"
+                     HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                     AbsoluteLayout.LayoutFlags="All"
+                     Spacing="7">
+            <Label Text="Harcourts Preet &amp; Co Login" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="#002B49"
+                   FontSize="Large"
+                   FontAttributes="Bold"/>
+
+            <StackLayout VerticalOptions="Center"
+                         IsVisible="True">
+                <Entry x:Name="entryUsername" 
+                       TextColor="#002B49"
+                       PlaceholderColor="#002B49"
+                       Placeholder="Username"/>
+
+                <Entry x:Name="entryPassword"
+                       TextColor="#002B49"
+                       PlaceholderColor="#002B49"
+                       Placeholder="Password"
+                       IsPassword="True"/>
+
+                <Button x:Name="loginButton"
+                        BackgroundColor="#00ADEF"
+                        Text="Login"
+                        TextColor="#002B49"
+                        Clicked="OnLoginButtonClickedAsync"/>
+            </StackLayout>
+
+            <ActivityIndicator x:Name="loadingIndicator"
+                               Color="#002B49" 
+                               VerticalOptions="Center"
+                               IsRunning="false"
+                               IsVisible="false"/>
+
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="End">
+                <Label Text="Remember me?"
+                       TextColor="#002B49"/>
+                <Switch IsToggled="True"/>
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

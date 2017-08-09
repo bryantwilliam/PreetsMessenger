@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PreetsMessenger.Profile.ProfileEditorModalPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Name" />
+                <Entry Placeholder="William"/>
+            </StackLayout>
+            
+            <Label Text="Contact"
+                   FontAttributes="Bold"/>
+            
+            <StackLayout Padding="20,0,0,0">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Mobile" />
+                    <Entry Placeholder="1234567890"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Email" />
+                    <Entry Placeholder="will.bryant.will@gmail.com"/>
+                </StackLayout>
+            </StackLayout>
+            <Button Text="Save"
+                    Clicked="OnSaveClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
