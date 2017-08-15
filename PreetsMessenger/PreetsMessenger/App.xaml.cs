@@ -13,7 +13,8 @@ namespace PreetsMessenger
         {
             InitializeComponent();
 
-            MainPage = new LoginPage();
+            //MainPage = new LoginPage();
+            MainPage = new TabbedPageNavigation();
         }
 
         protected override void OnStart()

@@ -12,9 +12,17 @@ namespace PreetsMessenger.Contacts
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ContactInfoModalPage : ContentPage
 	{
-		public ContactInfoModalPage ()
+        public string name { get; set; }
+        public string mobile { get; set; }
+        public string imageSource { get; set; }
+
+        public ContactInfoModalPage (string name, string mobile)
 		{
-			InitializeComponent ();
+            this.name = name;
+            this.mobile = mobile;
+            this.imageSource = "http://lorempixel.com/200/200/people";
+
+            InitializeComponent ();
 		}
 	}
 }

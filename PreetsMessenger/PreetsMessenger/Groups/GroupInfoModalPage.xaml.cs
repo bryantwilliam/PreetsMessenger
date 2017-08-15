@@ -12,8 +12,13 @@ namespace PreetsMessenger.Groups
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class GroupInfoModalPage : ContentPage
 	{
-		public GroupInfoModalPage ()
+        public string name { get; set; }
+        public int numberOfMembers { get; set; }
+
+		public GroupInfoModalPage (string name, int numberOfMembers)
 		{
+            this.name = name;
+            this.numberOfMembers = numberOfMembers;
 			InitializeComponent ();
 		}
 	}

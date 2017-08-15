@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:groups="clr-namespace:PreetsMessenger.Groups;assembly=PreetsMessenger"
+            xmlns:contacts="clr-namespace:PreetsMessenger.Contacts;assembly=PreetsMessenger"
+            xmlns:profile="clr-namespace:PreetsMessenger.Profile;assembly=PreetsMessenger"
+            x:Class="PreetsMessenger.TabbedPageNavigation"
+            Title="Preet's Messenger">
+    <groups:GroupsPage Title="Groups"/>
+    <contacts:ContactsPage Title="Contacts"/>
+    <profile:ProfileViewerPage Title="Profile"/>
+</TabbedPage>

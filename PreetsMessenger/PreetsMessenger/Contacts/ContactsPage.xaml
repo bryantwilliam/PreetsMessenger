@@ -1,10 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PreetsMessenger;assembly=PreetsMessenger"
              x:Class="PreetsMessenger.Contacts.ContactsPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
-        </StackLayout>
+        <AbsoluteLayout>
+            <Image Source="{local:EmbeddedImage PreetsMessenger.Resources.background.png}" 
+                           Aspect="AspectFill" 
+                           AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                           AbsoluteLayout.LayoutFlags="All"/>
+            
+            <ListView x:Name="contactsList"
+                      AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                      AbsoluteLayout.LayoutFlags="All"
+                      SeparatorColor="#002B49">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding name}" 
+                               Detail="{Binding mobile}" 
+                               ImageSource="{Binding imageSource}"
+                               TextColor="WhiteSmoke"
+                               DetailColor="#00ADEF"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </AbsoluteLayout>
+        
     </ContentPage.Content>
 </ContentPage>
